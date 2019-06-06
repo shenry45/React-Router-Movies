@@ -1,7 +1,10 @@
 import React from 'react';
 
 const MovieCard = props => {
-  return;
+  return (
+    <a href={`/movies/${props.id}`}>
+    </a>
+  )
 };
 
 export default MovieCard;
