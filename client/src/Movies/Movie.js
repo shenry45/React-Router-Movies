@@ -51,6 +51,7 @@ export default class Movie extends Component {
           director={director}
           metascore={metascore}
           stars={stars}
+          id={this.props.match.params.id}
         />
         <div className="save-button" onClick={this.saveMovie}>Save</div>
       </div>
