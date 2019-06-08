@@ -9,11 +9,12 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      savedList: []
+      savedList: [],
+      id: undefined
     };
   }
 
-  addToSavedList = movie => {
+  addToSavedList = (movie, id) => {
     const savedList = this.state.savedList;
     savedList.push(movie);
     this.setState({ savedList });
@@ -22,7 +23,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <SavedList list={this.state.savedList} />
+        <SavedList
+          list={this.state.savedList}
+          id={this.state.id} 
+        />
         <Route
           path="/movies/:id"
           render={(props) => (
